@@ -9,6 +9,8 @@ plugins {
 dependencies {
 	// 유저 유스케이스 호출을 위해 애플리케이션 계층에 의존한다.
 	implementation(project(":user-application"))
+	// 유스케이스 조립 시 도메인 리포지토리 타입을 참조하므로 domain 모듈에 의존한다.
+	implementation(project(":user-domain"))
 	// 유저 인프라 구현을 포함하기 위해 인프라 계층에 의존한다.
 	implementation(project(":user-infrastructure"))
 	// 공통 응답 모델을 사용하기 위해 공유 모듈에 의존한다.
