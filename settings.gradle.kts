@@ -1,4 +1,4 @@
-rootProject.name = "blog"
+rootProject.name = "clean-architecture-study"
 
 // 클린 아키텍처 계층을 모듈로 분리한다.
 include(":shared-kernel")
