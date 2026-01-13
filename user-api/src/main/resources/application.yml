@@ -1,0 +1,25 @@
+# user-api 기본 설정이다.
+spring:
+  # 애플리케이션 식별자 설정이다.
+  application:
+    name: user-api
+  # OIDC 리소스 서버 설정이다.
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Keycloak issuer URI는 Realm 경로와 반드시 일치해야 한다.
+          issuer-uri: "http://localhost:8080/realms/clean-architecture"
+      client:
+        registration:
+          keycloak:
+            # Keycloak에 등록된 클라이언트 ID다.
+            client-id: "user-api"
+            # 로컬 개발용 클라이언트 시크릿이다.
+            client-secret: "user-api-secret"
+            # OIDC 표준 스코프와 이메일 클레임을 요청한다.
+            scope: "openid,profile,email"
+        provider:
+          keycloak:
+            # 로그인/토큰 엔드포인트를 찾아가기 위한 issuer URI다.
+            issuer-uri: "http://localhost:8080/realms/clean-architecture"
