@@ -11,7 +11,10 @@
 - 패키지명을 dev.jh.blog.presentation → dev.jh.blog.api 로 변경.
 - 커뮤니티/유저 도메인별 클린 아키텍처 모듈 세트로 재구성하고 shared-kernel 모듈을 추가해 공통 응답 모델을 분리.
 - 유저 도메인에 OIDC 기반 프로비저닝/조회/수정/탈퇴 유스케이스와 API를 추가하고 보안/검증 설정을 구성.
+- 로컬 Keycloak(dev) Realm/Client를 구성하고 user-api OIDC issuer/client 설정을 실제 값으로 반영.
+- 전체 패키지 네임스페이스를 dev.jh.blog → dev.jh 로 단순화하고 모듈 간 의존성 누락(user-domain)을 보완.
 
 ## 환경/작업 메모
 - Gradle 툴체인 자동 다운로드: org.gradle.java.installations.auto-download=true
 - 기본 툴체인 버전: Java 21
+- 레포 폴더명을 clean-architecture-study로 변경하고 GitHub 원격 저장소(https://github.com/Ji-Hyeong/clean-architecture-study)에 커밋 분할 후 푸시.
