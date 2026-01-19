@@ -5,6 +5,8 @@ plugins {
 	// 모든 모듈에서 동일한 버전을 쓰기 위해 루트에만 선언하고, 각 모듈에서 선택 적용한다.
 	kotlin("jvm") version "2.2.21" apply false
 	kotlin("plugin.spring") version "2.2.21" apply false
+	// JPA 엔티티에 대해 no-arg/all-open 처리를 지원하는 플러그인이다.
+	kotlin("plugin.jpa") version "2.2.21" apply false
 	id("org.springframework.boot") version "4.0.1" apply false
 	id("io.spring.dependency-management") version "1.1.7" apply false
 }

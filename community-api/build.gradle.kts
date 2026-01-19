@@ -17,8 +17,14 @@ dependencies {
 	implementation(project(":shared-kernel"))
 	// 스프링 부트 웹 실행에 필요한 기본 스타터를 사용한다.
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	// 데이터베이스 스키마를 코드로 관리하기 위해 Flyway를 사용한다.
+	implementation("org.flywaydb:flyway-core")
+	// Flyway가 PostgreSQL에 연결할 수 있도록 DB 모듈을 추가한다.
+	implementation("org.flywaydb:flyway-database-postgresql")
 	// Kotlin 데이터 클래스를 JSON으로 역직렬화하기 위해 모듈을 추가한다.
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	// PostgreSQL JDBC 드라이버는 런타임에만 필요하다.
+	runtimeOnly("org.postgresql:postgresql")
 
 	// 스프링 부트 통합 테스트를 위한 의존성이다.
 	testImplementation("org.springframework.boot:spring-boot-starter-test")

@@ -14,6 +14,8 @@
 - 로컬 Keycloak(dev) Realm/Client를 구성하고 user-api OIDC issuer/client 설정을 실제 값으로 반영.
 - 전체 패키지 네임스페이스를 dev.jh.blog → dev.jh 로 단순화하고 모듈 간 의존성 누락(user-domain)을 보완.
 - user-api 설정 파일을 application.yml로 전환해 OIDC 구성 가독성을 개선.
+- PostgreSQL 연결 설정을 추가하고 Flyway 기반 users 테이블 마이그레이션과 JPA 영속성 어댑터를 구성.
+- 인메모리 저장소를 제거하고 community/user 도메인에 JPA 기반 영속성 어댑터와 마이그레이션을 추가.
 
 ## 환경/작업 메모
 - Gradle 툴체인 자동 다운로드: org.gradle.java.installations.auto-download=true
